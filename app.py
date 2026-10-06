@@ -86,10 +86,22 @@ st.markdown("""
     padding-bottom: 2rem;
 }
 [data-testid="stMetric"] {
-    background: #121a2d;
-    border: 1px solid #24304a;
-    padding: 14px;
+    background: #16213a;
+    border: 1px solid #334563;
+    padding: 16px;
     border-radius: 12px;
+}
+[data-testid="stMetricLabel"] {
+    color: #b9c7df !important;
+    font-weight: 600 !important;
+}
+[data-testid="stMetricValue"] {
+    color: #ffffff !important;
+    font-size: 2rem !important;
+    font-weight: 750 !important;
+}
+[data-testid="stMetricDelta"] {
+    color: #8ee6b1 !important;
 }
 .dashboard-title {
     font-size: 2.0rem;
@@ -151,13 +163,24 @@ st.sidebar.info(
 # Header
 # -----------------------------
 st.markdown(
-    '<div class="dashboard-title">Cyber Threat Detection & Adaptive Response</div>',
+    '<div class="dashboard-title">🛡️ Cyber Threat Detection & Adaptive Response</div>',
     unsafe_allow_html=True,
 )
 st.markdown(
-    '<div class="subtitle">Hybrid Transformer–PPO Framework • SOC Monitoring Dashboard</div>',
+    '<div class="subtitle">Hybrid Transformer–PPO Framework &nbsp;•&nbsp; SOC Monitoring Dashboard</div>',
     unsafe_allow_html=True,
 )
+
+# -----------------------------
+# System status
+# -----------------------------
+s1, s2, s3 = st.columns([1, 1, 2])
+with s1:
+    st.success("● Detection Engine Online")
+with s2:
+    st.info("● PPO Decision Layer Ready")
+with s3:
+    st.caption("CICIDS2017 • Offline flow analysis • Phase-1 prototype")
 
 # -----------------------------
 # KPI cards
