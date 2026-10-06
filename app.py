@@ -82,7 +82,7 @@ st.markdown("""
     background: #0b1020;
 }
 .block-container {
-    padding-top: 1.2rem;
+    padding-top: 3.2rem !important;
     padding-bottom: 2rem;
 }
 [data-testid="stMetric"] {
@@ -104,9 +104,11 @@ st.markdown("""
     color: #8ee6b1 !important;
 }
 .dashboard-title {
-    font-size: 2.0rem;
+    font-size: 1.85rem;
+    line-height: 1.25;
     font-weight: 700;
-    margin-bottom: 0.1rem;
+    margin-top: 0.4rem;
+    margin-bottom: 0.35rem;
 }
 .subtitle {
     color: #9aa8c2;
